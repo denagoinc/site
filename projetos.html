@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+
+  <style>
+    body {
+      background: #ffffff; /* deixa visível */
+      color: rgb(0, 0, 0);
+    }
+
+    .projetos-container {
+      margin-top: 150px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-size: 40px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .dots::after {
+      content: "";
+      animation: dots 1.2s infinite steps(4);
+    }
+
+    @keyframes dots {
+      0%   { content: ""; }
+      25%  { content: "."; }
+      50%  { content: ".."; }
+      75%  { content: "..."; }
+      100% { content: ""; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header" style="z-index:999;">
+    <nav class="nav">
+      <a href="/" class="logo">
+        <img src="logo.png" alt="Logo do site">
+      </a>
+
+      <button class="hamburger"></button>
+
+      <ul class="nav-list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="projetos-container">
+      Em breve<span class="dots"></span>
+    </div>
+  </main>
+
+</body>
+</html>
