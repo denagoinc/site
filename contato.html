@@ -81,8 +81,11 @@
   method="POST" 
   class="form-contato">
 
+  <!-- Redireciona corretamente para /site/obrigado.html -->
+  <input type="hidden" name="_next" value="https://denagoinc.github.io/site/obrigado.html">
+
+  <!-- Desativa Captcha -->
   <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_next" value="https://denagoinc.github.io/site/">
 
   <label for="email">Seu e-mail</label>
   <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
@@ -93,10 +96,12 @@
   <button type="submit">Enviar</button>
 </form>
 
+
     </main>
 
   </body>
 </html>
+
 
 
 
