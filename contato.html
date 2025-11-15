@@ -86,20 +86,34 @@
       <!-- FORMULÁRIO CENTRALIZADO + FUNCIONAL (WEB3FORMS) -->
       <div class="form-wrapper">
 
-        <<form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="cc33990e-d721-4b12-838c-20604f4f73ec">
-  <input type="text" name="name" required>
-  <input type="email" name="email" required>
-  <textarea name="message" required></textarea>
-  <button type="submit">Submit Form</button>
-</form>
+        <form 
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="form-contato">
+
+          <div class="form-header">FORMULÁRIO DE CONTATO</div>
+
+          <!-- COLE SUA API KEY AQUI -->
+          <input type="hidden" name="access_key" value="cc33990e-d721-4b12-838c-20604f4f73ec">
+
+          <!-- Redirecionamento -->
+          <input type="hidden" name="redirect" value="https://denagoinc.github.io/site/obrigado.html">
+
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="name" required>
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensagem">Texto:</label>
+          <textarea id="mensagem" name="message" rows="6" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+
       </div>
 
     </main>
 
   </body>
 </html>
-
-
-
-
