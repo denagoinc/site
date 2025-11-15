@@ -8,46 +8,54 @@
     <script defer src="app.js"></script>
 
     <style>
+      /* === ESTILO IGUAL AO DA SEGUNDA IMAGEM === */
+      .form-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+      }
+
       .form-contato {
-        max-width: 450px;
-        margin: 40px auto;
+        width: 340px;
         padding: 20px;
-        border-radius: 12px;
-        background: #ffffff15;
-        backdrop-filter: blur(6px);
-        box-shadow: 0 0 15px #00000025;
+        border: 1px solid #ccc;
+        background: #f2f2f2;
+      }
+
+      .form-header {
+        background: #ccc;
+        text-align: center;
+        font-weight: bold;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 18px;
       }
 
       .form-contato label {
         display: block;
-        margin-bottom: 6px;
-        font-weight: bold;
-        font-size: 15px;
+        margin-bottom: 5px;
+        font-size: 14px;
       }
 
       .form-contato input,
       .form-contato textarea {
         width: 100%;
-        padding: 10px;
-        margin-bottom: 14px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-        font-size: 15px;
+        padding: 6px;
+        margin-bottom: 12px;
+        border: 1px solid #888;
+        font-size: 14px;
       }
 
       .form-contato button {
-        width: 100%;
-        padding: 12px;
-        border: none;
-        border-radius: 6px;
-        background: #2b047c;
-        color: white;
-        font-size: 16px;
+        padding: 6px 14px;
+        background: #e6e6e6;
+        border: 1px solid #777;
         cursor: pointer;
       }
 
       .form-contato button:hover {
-        opacity: 0.9;
+        background: #dcdcdc;
       }
     </style>
   </head>
@@ -75,37 +83,37 @@
 
     <main class="hero">
 
-      <!-- FORMULÁRIO -->
-     <form 
-  action="https://formsubmit.co/denagocontato@gmail.com" 
-  method="POST" 
-  class="form-contato">
+      <!-- FORMULÁRIO CENTRALIZADO + FUNCIONAL (WEB3FORMS) -->
+      <div class="form-wrapper">
 
-  <!-- Redireciona corretamente para /site/obrigado.html -->
-  <input type="hidden" name="_next" value="https://denagoinc.github.io/site/obrigado.html">
+        <form 
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="form-contato">
 
-  <!-- Desativa Captcha -->
-  <input type="hidden" name="_captcha" value="false">
+          <div class="form-header">FORMULÁRIO DE CONTATO</div>
 
-  <label for="email">Seu e-mail</label>
-  <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+          <!-- COLE SUA API KEY AQUI -->
+          <input type="hidden" name="access_key" value="SUA-API-KEY-AQUI">
 
-  <label for="mensagem">Mensagem</label>
-  <textarea id="mensagem" name="message" rows="5" placeholder="Digite sua mensagem" required></textarea>
+          <!-- Redirecionamento -->
+          <input type="hidden" name="redirect" value="https://denagoinc.github.io/site/obrigado.html">
 
-  <button type="submit">Enviar</button>
-</form>
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="name" required>
 
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensagem">Texto:</label>
+          <textarea id="mensagem" name="message" rows="6" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+
+      </div>
 
     </main>
 
   </body>
 </html>
-
-
-
-
-
-
-
-
